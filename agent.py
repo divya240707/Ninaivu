@@ -16,7 +16,7 @@ load_dotenv()
 
 SESSIONS = 3
 RUNS_PER_SESSION = 10
-MODEL = "openai/gpt-oss-120b"
+MODEL = "openai/gpt-oss-20b"
 LIMITS = {
     "n_estimators": (10, 300),
     "max_depth": (1, 40),
@@ -76,7 +76,10 @@ def propose(session_log, recalled):
             )
             match = re.search(r"\{.*\}", reply.choices[0].message.content, re.S)
             return clamp(json.loads(match.group(0))), False
-        except Exception:
+        except Exception as exc:
+            if type(exc).__name__ == "RateLimitError":
+                raise SystemExit(f"rate limited: {str(exc)[:300]}")
+            print(f"proposal failed: {type(exc).__name__}: {str(exc)[:200]}")
             time.sleep(2)
     return random_config(), True
 

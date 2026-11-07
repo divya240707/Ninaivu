@@ -1,0 +1,11 @@
+mode,trial,session,run,test_f1,best_so_far,status,repeated_failure,fallback,config
+baseline,7,1,1,0.5693,0.5693,ok,False,False,"{""drop_columns"": [""customerID"", ""TotalCharges""], ""model"": ""gradient_boosting"", ""params"": {""learning_rate"": 0.05, ""max_depth"": 3.0, ""n_estimators"": 200.0}, ""scale"": false}"
+baseline,7,1,2,0.5949,0.5949,ok,False,False,"{""drop_columns"": [""customerID"", ""TotalCharges""], ""model"": ""logreg"", ""params"": {""C"": 0.8}, ""scale"": true}"
+baseline,7,1,3,0.5721,0.5949,ok,False,False,"{""drop_columns"": [""customerID""], ""model"": ""random_forest"", ""params"": {""max_depth"": 8.0, ""n_estimators"": 300.0}, ""scale"": false}"
+baseline,7,1,4,0.4068,0.5949,ok,False,True,"{""drop_columns"": [], ""model"": ""random_forest"", ""params"": {""max_depth"": 16.750174370233317, ""n_estimators"": 139.32150477089345}, ""scale"": true}"
+baseline,7,1,5,0.5928,0.5949,overfit,False,True,"{""drop_columns"": [], ""model"": ""logreg"", ""params"": {""C"": 88.97344373593752}, ""scale"": true}"
+baseline,7,1,6,0.5951,0.5951,overfit,False,True,"{""drop_columns"": [], ""model"": ""logreg"", ""params"": {""C"": 59.47419126557909}, ""scale"": true}"
+baseline,7,1,7,0.1667,0.5951,ok,False,True,"{""drop_columns"": [], ""model"": ""random_forest"", ""params"": {""max_depth"": 9.290960095460543, ""n_estimators"": 21.069439739928647}, ""scale"": true}"
+baseline,7,1,8,0.0,0.5951,ok,False,True,"{""drop_columns"": [], ""model"": ""random_forest"", ""params"": {""max_depth"": 6.345820279851973, ""n_estimators"": 36.907171508029165}, ""scale"": true}"
+baseline,7,1,9,0.5154,0.5951,overfit,False,True,"{""drop_columns"": [], ""model"": ""random_forest"", ""params"": {""max_depth"": 24.23621726655795, ""n_estimators"": 112.58517798782242}, ""scale"": true}"
+baseline,7,1,10,0.56,0.5951,overfit,False,True,"{""drop_columns"": [], ""model"": ""gradient_boosting"", ""params"": {""learning_rate"": 0.35481167294619254, ""max_depth"": 32.49849749526006, ""n_estimators"": 149.3592477317582}, ""scale"": true}"
